@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# React Dropdown UI Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable **React dropdown component library** built with TypeScript, Storybook, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Tools Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **TypeScript** – for type-safe components
+- **Storybook** – for interactive component documentation
+- **Vitest** – for unit testing
+- **Tsup** – for bundling components
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Install directly from GitHub:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm i https://github.com/gvinianidzegivi/react-dropdown.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This allows you to use the dropdown component in other React projects.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Usage
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+After installing, import and use the dropdown component like any other React component:
+
+```tsx
+import { Dropdown } from 'react-dropdown-ui-library';
+
+function App() {
+  return <Dropdown options={['Option 1', 'Option 2', 'Option 3']} />;
+}
 ```
+
+## Development
+
+### Adding a New Component
+
+1. Create your new component.
+2. Register it in `index.ts`.
+3. Run the prepare script:
+
+```bash
+npm run prepare
+```
+
+### Running Storybook
+
+To start or deploy Storybook, use:
+
+```bash
+npm run storybook       # start locally
+npm run sb:deploy       # deploy Storybook
+```
+
+### Bundling
+
+Components are bundled using **Tsup** for easy consumption in other React projects. _(Previously, Rollup was used.)_
+
+### Testing
+
+Simple tests are provided for each component using **Vitest**:
+
+```bash
+npm run test
+```
+
+### Styling
+
+The library uses **Tailwind CSS**. SCSS was considered but Tailwind was chosen for simplicity and consistency.
