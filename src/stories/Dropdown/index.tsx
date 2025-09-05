@@ -84,15 +84,14 @@ export const Dropdown = ({
     <div className="relative">
       <div
         className="border rounded-sm p-2 flex justify-between items-center cursor-pointer border-gray-400 hover:border-gray-500"
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => setOpen((open) => !open)}
       >
-        <div className="flex gap-2">
+        <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
           {multiple
             ? selectedOptions.map((selectedOption) => (
                 <div
                   key={selectedOption.id}
                   className=" bg-gray-100 gap-1 p-2 rounded-4xl flex items-center"
-                  onClick={(e) => e.stopPropagation()}
                 >
                   {selectedOption.label}
                   <CircleX
@@ -109,7 +108,7 @@ export const Dropdown = ({
         </div>
         <ChevronDown />
       </div>
-      {open && withPortal ? createPortal(content, document.body) : content}
+      {open && (withPortal ? createPortal(content, document.body) : content)}
     </div>
   );
 };
