@@ -1,27 +1,34 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Dropdown as DropdownComponent } from '.';
 
-import { fn } from "storybook/test";
-import { Dropdown } from ".";
-
-const meta = {
-  title: "Example/Dropdown",
-  component: Dropdown,
-  parameters: {
-    layout: "centered",
-  },
-  tags: ["autodocs"],
+const meta: Meta<typeof DropdownComponent> = {
+  title: 'Components/Form',
+  component: DropdownComponent,
+  tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: "color" },
+    multiple: { control: 'boolean' },
+    withSearch: { control: 'boolean' },
+    withPortal: { control: 'boolean' },
   },
-  args: { onClick: fn() },
-} satisfies Meta<typeof Dropdown>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+type Story = StoryObj<typeof DropdownComponent>;
+
+const options = [
+  { id: 1, label: 'Apple', value: 'apple' },
+  { id: 2, label: 'Banana', value: 'banana' },
+  { id: 3, label: 'Orange', value: 'orange' },
+  { id: 4, label: 'Mango', value: 'mango' },
+  { id: 5, label: 'Grapes', value: 'grapes' },
+];
+
+export const Dropdown: Story = {
   args: {
-    primary: true,
-    label: "Dmkkropdown",
+    options,
+    multiple: true,
+    withSearch: false,
+    withPortal: true,
   },
 };

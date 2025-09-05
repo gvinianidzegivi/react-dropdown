@@ -8,7 +8,7 @@ interface BadgeProps {
 
 const variantClasses = {
   primary: 'bg-gray-100 text-black hover:bg-gray-300',
-  secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
+  secondary: 'bg-red-400 text-white hover:bg-red-600',
 };
 
 export const Badge = ({ id, onClick, className, children, variant = 'primary' }: BadgeProps) => {

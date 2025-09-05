@@ -1,27 +1,30 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Badge } from '.';
 
-import { fn } from "storybook/test";
-import { Dropdown } from ".";
-
-const meta = {
-  title: "Example/Dropdown",
-  component: Dropdown,
-  parameters: {
-    layout: "centered",
-  },
-  tags: ["autodocs"],
+const meta: Meta<typeof Badge> = {
+  title: 'Components/Badge',
+  component: Badge,
+  tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: "color" },
+    variant: {},
+    onClick: {},
   },
-  args: { onClick: fn() },
-} satisfies Meta<typeof Dropdown>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+
+type Story = StoryObj<typeof Badge>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: "Dmkkropdown",
+    children: 'Primary Badge',
+    variant: 'primary',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: 'Secondary Badge',
+    variant: 'secondary',
   },
 };
