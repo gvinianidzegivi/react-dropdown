@@ -1,4 +1,4 @@
-import { Dropdown } from './stories/Dropdown';
+import { Dropdown } from '.';
 
 export const App = () => {
   const data = [
