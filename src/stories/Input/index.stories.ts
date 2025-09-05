@@ -13,5 +13,7 @@ export default meta;
 type Story = StoryObj<typeof InputComponent>;
 
 export const Input: Story = {
-  args: {},
+  args: {
+    placeholder: 'type here...',
+  },
 };
