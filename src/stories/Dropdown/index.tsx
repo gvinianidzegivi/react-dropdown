@@ -1,4 +1,4 @@
-import "./button.css";
+import "./index.scss";
 
 export interface ButtonProps {
   primary?: boolean;
@@ -15,15 +15,10 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
   return (
     <button
       type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
+      className="button button--text"
       style={{ backgroundColor }}
       {...props}
     >

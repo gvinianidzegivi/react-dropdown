@@ -1,3 +1,10 @@
+import { Button } from "./stories/Dropdown";
+
 export const App = () => {
-  return <>React Dropdown</>;
+  return (
+    <>
+      <h1>React Dropdown</h1>
+      <Button label="button" />
+    </>
+  );
 };
