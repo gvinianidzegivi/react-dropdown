@@ -11,7 +11,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsup src/stories/index.ts --format cjs,esm --dts",
+    "build": "tsup src/stories/index.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
