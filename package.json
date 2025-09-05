@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -11,7 +11,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsup src/stories/index.ts --format cjs,esm --dts",
+    "build": "tsup",
+    "prepare": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
