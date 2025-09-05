@@ -2,6 +2,7 @@ import { ChevronDown, CircleX, Search } from 'lucide-react';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Badge } from '../Badge';
+import { Input } from '../Input';
 interface Option {
   id: number;
   label: string;
@@ -55,7 +56,7 @@ export const Dropdown = ({
       {withSearch && (
         <div className="border-b p-2 flex items-center">
           <Search className="text-gray-400" />
-          <input
+          <Input
             className="w-full pl-2 outline-none"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
