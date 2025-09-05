@@ -1,3 +1,3 @@
-// export * from './stories/Dropdown';
+export * from './Dropdown';
 export * from './Badge';
-// export * from './stories/Input';
+export * from './Input';
