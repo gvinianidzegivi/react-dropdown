@@ -1,7 +1,7 @@
 import { ChevronDown, CircleX, Search } from 'lucide-react';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-
+import { Badge } from '../Badge';
 interface Option {
   id: number;
   label: string;
@@ -68,15 +68,13 @@ export const Dropdown = ({
 
       <div className="flex flex-col">
         {filteredOptions.map((option) => (
-          <div
+          <Badge
             key={option.id}
             onClick={() => handleSelect(option)}
-            className={`p-2 cursor-pointer hover:bg-gray-100 ${
-              isSelected(option) ? 'bg-gray-200' : ''
-            }`}
+            className={isSelected(option) ? 'bg-gray-200' : ''}
           >
             {renderOption ? renderOption(option, isSelected(option)) : option.label}
-          </div>
+          </Badge>
         ))}
       </div>
     </div>
