@@ -1,6 +1,6 @@
 {
   "name": "react-dropdown",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,7 +11,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup src/stories/index.ts --format cjs,esm --dts",
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
@@ -53,6 +53,7 @@
     "sass-embedded": "^1.92.0",
     "storybook": "^9.1.4",
     "tailwindcss": "^4.1.13",
+    "tsup": "^8.5.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
