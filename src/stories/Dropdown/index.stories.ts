@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { fn } from "storybook/test";
-import { Button } from ".";
+import { Dropdown } from ".";
 
 const meta = {
-  title: "Example/Button",
-  component: Button,
+  title: "Example/Dropdown",
+  component: Dropdown,
   parameters: {
     layout: "centered",
   },
@@ -14,7 +14,7 @@ const meta = {
     backgroundColor: { control: "color" },
   },
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Dropdown>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,6 +22,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: "Button",
+    label: "Dmkkropdown",
   },
 };

@@ -12,6 +12,7 @@
     "sb:build": "storybook build"
   },
   "dependencies": {
+    "lucide-react": "^0.542.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -22,6 +23,7 @@
     "@storybook/addon-docs": "^9.1.4",
     "@storybook/addon-vitest": "^9.1.4",
     "@storybook/react-vite": "^9.1.4",
+    "@tailwindcss/vite": "^4.1.13",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
@@ -35,7 +37,6 @@
     "playwright": "^1.55.0",
     "sass-embedded": "^1.92.0",
     "storybook": "^9.1.4",
-    "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
